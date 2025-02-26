@@ -24,8 +24,8 @@
   <nav>
     <div class="text-xl font-bold">EasyDNS</div>
     <div>
-      <a href="#">Dashboard</a>
-      <a href="#">Domain Names</a>
+      <a href="/">Dashboard</a>
+      <a href="/domains">Domain Names</a>
       <a href="#">Certificates</a>
       <a href="#">Contacts</a>
       <a href="#">Templates</a>
@@ -37,18 +37,7 @@
     </div>
   </nav>
   <div class="container">
-    <h1>Register domain</h1>
-    <%= form_with url: "/domains/register", method: "post" do %>
-      <div class="form-group">
-        <label>Domain Name</label>
-        <%= text_field_tag :domain_name, nil %>
-      </div>
-      <p>Domain registrations are billed immediately upon successful registration. <a href="#">See our TLD price list</a> for prices.</p>
-      <div class="btn-group">
-        <%= button_tag "Cancel", type: "button", class: "btn btn-cancel" %>
-        <%= submit_tag "Continue", class: "btn btn-submit" %>
-      </div>
-    <% end %>
+    <%= yield %>
   </div>
 </body>
 </html>
