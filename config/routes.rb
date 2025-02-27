@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  match "/terminal",
+    to: Terminalwire::Rails::Thor.new(MainTerminal),
+    via: [:get, :connect]
+
   resources :dns_records, except: [:index, :new, :create]
   resources :domains do
     resources :dns_records, only: [:index, :new, :create]

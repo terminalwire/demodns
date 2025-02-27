@@ -67,3 +67,6 @@ gem "dockerfile-rails", ">= 1.7", :group => :development
 gem "litestream", "~> 0.12.0"
 
 gem "aws-sdk-s3", "~> 1.182", :require => false
+
+gem "terminalwire-rails", "~> 0.3.4"
+gem "terminalwire", group: :development
