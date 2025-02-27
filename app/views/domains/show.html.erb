@@ -1,8 +1,14 @@
 <p style="color: green"><%= notice %></p>
 
+<h1>
+  <%= @domain.name %>
+</h1>
+
+
 <%= render @domain %>
 
 <div>
+  <%= link_to "DNS Records", domain_dns_records_path(@domain) %> |
   <%= link_to "Edit this domain", edit_domain_path(@domain) %> |
   <%= link_to "Back to domains", domains_path %>
 

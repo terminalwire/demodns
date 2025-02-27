@@ -1,0 +1,15 @@
+<% content_for :title, "New dns record" %>
+
+<h1>
+  New
+  <%= @domain.name %>
+  DNS record
+</h1>
+
+<%= render "form", dns_record: @dns_record %>
+
+<br>
+
+<div>
+  <%= link_to "Back to DNS records", domain_dns_records_path(@domain) %>
+</div>

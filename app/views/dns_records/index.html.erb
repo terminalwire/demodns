@@ -1,0 +1,19 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "DNS records" %>
+
+<h1>
+  <%= @domain.name %>
+  DNS records
+</h1>
+
+<div id="dns_records">
+  <% @dns_records.each do |dns_record| %>
+    <%= render dns_record %>
+    <p>
+      <%= link_to "Show this DNS record", dns_record %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New DNS record", new_domain_dns_record_path(@domain) %>

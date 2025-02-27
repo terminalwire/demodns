@@ -1,0 +1,16 @@
+<% content_for :title, "Editing dns record" %>
+
+<h1>
+  Editing
+  <%= @domain.name %>
+  DNS record
+</h1>
+
+<%= render "form", dns_record: @dns_record %>
+
+<br>
+
+<div>
+  <%= link_to "Show this DNS record", @dns_record %> |
+  <%= link_to "Back to DNS records", domain_dns_records_path(@domain) %>
+</div>

@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>
+  <%= @domain.name %>
+  DNS record
+</h1>
+
+<%= render @dns_record %>
+
+<div>
+  <%= link_to "Edit this DNS record", edit_dns_record_path(@dns_record) %> |
+  <%= link_to "Back to DNS records", domain_dns_records_path(@dns_record.domain) %>
+
+  <%= button_to "Destroy this DNS record", @dns_record, method: :delete %>
+</div>

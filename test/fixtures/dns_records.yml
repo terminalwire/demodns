@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  domain: one
+  host: MyString
+  record_type: MyString
+  value: MyString
+  ttl: 1
+
+two:
+  domain: two
+  host: MyString
+  record_type: MyString
+  value: MyString
+  ttl: 1

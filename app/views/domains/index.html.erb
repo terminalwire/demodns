@@ -8,7 +8,8 @@
   <% @domains.each do |domain| %>
     <%= render domain %>
     <p>
-      <%= link_to "Show this domain", domain %>
+      <%= link_to "Show this domain", domain %> |
+      <%= link_to "DNS Records", domain_dns_records_path(domain) %>
     </p>
   <% end %>
 </div>
